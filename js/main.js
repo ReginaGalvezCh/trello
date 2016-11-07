@@ -5,13 +5,15 @@ function mostrarDiv(){
    var add= document.getElementById("miDiv");
     var elForm= document.createElement('form');
     var elInput=document.createElement('input');
-    var elBoton=document.createElement('button' ); 
+    var elBoton=document.createElement('input' ); 
+    elBotonoton.setAttribute('type', 'submit');
 
   var mensaje = "guardar";
   var mensajeBtn = document.createTextNode(mensaje);
   //poner text y atrubutte in btn
   elBoton.appendChild(mensajeBtn);
   elBoton.setAttribute("class,btn btn-primary");
+  elForm.setAttribute("class","return btnGuardar();");
 
   //unir el form con sus elementos input y btn
   elForm.appendChild(elInput);
@@ -36,7 +38,7 @@ function btnGuardar(){
 add.appendChild(elementoTexto);
 add.appendChild(siguienteNodo);
 
-
+return false;
 
 }
 
