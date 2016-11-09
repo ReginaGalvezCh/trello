@@ -8,20 +8,23 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-4">
-				<h2 class="fontrello text-center">Trello</h2>
-				
-					<input type="button btn btn-primary btn-md" name="nota" onclick="mostrarDiv()"/>
-				
-					<div class="miDiv"> </div>
-				
-			</div>	
+	<header>
+		<div class="container-fluid">
+			<h2 class="text-center">Trello</h2>
 		</div>
-	</div>
+	</header>
+	<section>	
+		<div class="container-fluid">
+			<div class="row">
+				<div id="miDiv"> </div>	
+				<button type="button" class="btn btn-primary btn-md " onclick="mostrarDiv()">Añadir lista</button> 
+			</div>
+		</div>
+	</section>
+
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>	

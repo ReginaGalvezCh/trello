@@ -2,91 +2,51 @@ function mostrarDiv(){
   //form
   //input
   //btn
-   var add= document.getElementById("miDiv");
-    var elForm= document.createElement('form');
-    var elInput=document.createElement('input');
-    var elBoton=document.createElement('input' ); 
-    elBotonoton.setAttribute('type', 'submit');
+  var add= document.getElementById('miDiv');
+  var elForm= document.createElement('div');
+  var elInput=document.createElement('input');
+  var elBoton=document.createElement('button' ); 
+  var mensajeBtn = document.createTextNode('guardar lista');
 
-  var mensaje = "guardar";
-  var mensajeBtn = document.createTextNode(mensaje);
-  //poner text y atrubutte in btn
-  elBoton.appendChild(mensajeBtn);
-  elBoton.setAttribute("class,btn btn-primary");
-  elForm.setAttribute("class","return btnGuardar();");
-
-  //unir el form con sus elementos input y btn
+  add.appendChild(elForm);
   elForm.appendChild(elInput);
   elForm.appendChild(elBoton);
-  //unir el div gral(agregar) a contenedor
-  add.appendChild(elForm);
+  elBoton.appendChild(mensajeBtn);
+
+  elForm.setAttribute('class','col-md-4');
+  elBoton.setAttribute('onclick','btnGuardar');
+  
+  //poner text y atrubutte in btn
+  elBoton.appendChild(mensajeBtn);
+  elBoton.setAttribute("class"," baja btn btn-primary ");
+  elBoton.setAttribute("onclick"," btnGuardar()");
 }  
 
 function btnGuardar(){
-  var add = document.getElementById("miDiv");
-  var escribeme = document.getElementsByTagName('input')[0].value;
-  var elNodo = document.createTextNode(escribeme);
-
-  var elementoTexto = document.createElement(h3);
-  elementoTexto.appendChild(elNodo);
-
+  var add = document.getElementById('miDiv').lastChild;
+  var escribeme = add.getElementsByTagName('input')[0];
+  var otroInput = add.getElementsByTagName('input')[0].value;
+  var botonDos = add.getElementsByTagName('button')[0];
+ 
+  var elementoTexto = document.createElement('h3');
   var siguienteBtn = document.createElement('button');
+  var divDos=document.createElement('div');
+  var elNodo = document.createTextNode(escribeme);
   var siguienteNodo = document.createTextNode('agregar');
 
+  elementoTexto.appendChild(elNodo);
+  add.appendChild(elementoTexto);
+  add.appendChild(divDos);
+  add.appendChild(siguienteBtn);
   siguienteBtn.appendChild(siguienteNodo);
 
-add.appendChild(elementoTexto);
-add.appendChild(siguienteNodo);
-
-return false;
+  divDos.setAttribute('class','miDiv');  
+  siguienteBtn.setAttribute('onclick','nuevaTarea()');
+  escribeme.setAttribute('class','hidden');
+  botonDos.setAttribute('class','hidden');
 
 }
+function nuevaTarea(){
 
 
-
-
-/*// Click en el btn para cerrar lista
-var cerrar = document.getElementsByClassName("cerrar");
-var i;
-for (i = 0; i < cerrar.length; i++) {
-  cerrar[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
 }
-
-// agregar visto cuando se selecciona un elemto
-var lista = document.querySelector('ul');
-lista.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// crear lista nueva cuando le doy al boton 
-
-function nuevaTarea() {
-  var li = document.createElement("li");
-  var ingresoValor = document.getElementById("miInput").value;
-  var t = document.createTextNode(ingresoValor);
-  li.appendChild(t);
-  if (ingresoValor === '') {
-    alert("Hola escribe algo!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("miInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\uD83D\uDDD1");
-  span.className = "cerrar";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < cerrar.length; i++) {
-    cerrar[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}*/
