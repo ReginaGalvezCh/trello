@@ -1,5 +1,39 @@
-#miDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+header .container-fluid {
+	background-color: #B935A7;
+	
 }
+
+#trello{
+	margin-top: 20px;
+	display: flex;
+    flex-direction: row;
+   
+}
+
+.boton {
+	margin: 10px;
+	display: inline-block;
+}
+
+.lista {
+	background-color: #B935A7;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+	margin-right: 5%;
+}
+
+h3 {
+	color: #CFCEC1;
+	font-weight: bold;
+}
+
+h4 {
+	color: #CFCEC1;
+	margin-left: 4px;
+}
+
+.nover {
+	display: none;
+}
+
